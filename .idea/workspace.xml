@@ -6,10 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fac9cae4-0261-47f7-9ab1-1f2e20f200c2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/salephone.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="fac9cae4-0261-47f7-9ab1-1f2e20f200c2" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/webpage/target/" />
@@ -310,67 +307,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="evelate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="phone" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -392,12 +328,12 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\IntelliJ IDEA space\salephone\src\main\webapp\WEB-INF\client" />
-      <recent name="G:\IntelliJ IDEA space\salephone\src\main\webapp\WEB-INF\client\order" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\IntelliJ IDEA space\salephone\src\main\webapp" />
       <recent name="G:\IntelliJ IDEA space\salephone\src\main\webapp\WEB-INF\admin\order" />
-      <recent name="G:\IntelliJ IDEA space\salephone\src\main\webapp\WEB-INF\admin\menu" />
-      <recent name="G:\IntelliJ IDEA space\salephone\src\main\webapp\WEB-INF\admin\shop" />
+      <recent name="G:\IntelliJ IDEA space\salephone\src\main\webapp\WEB-INF\admin\common" />
+      <recent name="G:\IntelliJ IDEA space\salephone\src\main\webapp\WEB-INF\client\order" />
+      <recent name="G:\IntelliJ IDEA space\salephone\src\main\webapp\WEB-INF\client\main" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.phone.controller" />
@@ -406,12 +342,12 @@
       <recent name="com.phone.controller.client" />
       <recent name="com.phone.controller.common" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\IntelliJ IDEA space\salephone\src\main\webapp" />
-      <recent name="G:\IntelliJ IDEA space\salephone\src\main\webapp\WEB-INF\admin\order" />
-      <recent name="G:\IntelliJ IDEA space\salephone\src\main\webapp\WEB-INF\admin\common" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\IntelliJ IDEA space\salephone\src\main\resources\mapper" />
+      <recent name="G:\IntelliJ IDEA space\salephone\src\main\webapp\WEB-INF\client" />
       <recent name="G:\IntelliJ IDEA space\salephone\src\main\webapp\WEB-INF\client\order" />
-      <recent name="G:\IntelliJ IDEA space\salephone\src\main\webapp\WEB-INF\client\main" />
+      <recent name="G:\IntelliJ IDEA space\salephone\src\main\webapp\WEB-INF\admin\order" />
+      <recent name="G:\IntelliJ IDEA space\salephone\src\main\webapp\WEB-INF\admin\menu" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -685,7 +621,7 @@
       <workItem from="1554725563757" duration="6772000" />
       <workItem from="1554771886362" duration="110000" />
       <workItem from="1554812118523" duration="3980000" />
-      <workItem from="1555069652258" duration="8465000" />
+      <workItem from="1555069652258" duration="10130000" />
     </task>
     <task id="LOCAL-00001" summary="代码初始化">
       <created>1555214345068</created>
@@ -694,11 +630,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555214345068</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="数据库">
+      <created>1555215511485</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1555215511485</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="512282000" />
+    <option name="totallyTimeSpent" value="513947000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -795,7 +738,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="代码初始化" />
-    <option name="LAST_COMMIT_MESSAGE" value="代码初始化" />
+    <MESSAGE value="数据库" />
+    <option name="LAST_COMMIT_MESSAGE" value="数据库" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
