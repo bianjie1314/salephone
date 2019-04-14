@@ -6,7 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fac9cae4-0261-47f7-9ab1-1f2e20f200c2" name="Default" comment="" />
+    <list default="true" id="fac9cae4-0261-47f7-9ab1-1f2e20f200c2" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/salephone.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/webpage/target/" />
@@ -91,7 +94,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IPhoneDao.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="25">
-              <caret line="65" column="44" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
+              <caret line="65" column="39" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -146,9 +149,9 @@
       <find>debugger;</find>
       <find>debug</find>
       <find>selectOrdersDetailList</find>
-      <find>updateBean</find>
       <find>update</find>
       <find>alert</find>
+      <find>updateBean</find>
     </findStrings>
     <replaceStrings>
       <replace>shopDao</replace>
@@ -299,68 +302,6 @@
               <item name="salephone" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="phone" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="phone" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="phone" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="phone" type="462c0819:PsiDirectoryNode" />
-              <item name="pojo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="phone" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="phone" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
@@ -744,7 +685,7 @@
       <workItem from="1554725563757" duration="6772000" />
       <workItem from="1554771886362" duration="110000" />
       <workItem from="1554812118523" duration="3980000" />
-      <workItem from="1555069652258" duration="7433000" />
+      <workItem from="1555069652258" duration="8465000" />
     </task>
     <task id="LOCAL-00001" summary="代码初始化">
       <created>1555214345068</created>
@@ -757,7 +698,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="511250000" />
+    <option name="totallyTimeSpent" value="512282000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -769,10 +710,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1451" y="38" width="1378" height="773" extended-state="0" />
+    <frame x="1451" y="38" width="1629" height="773" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.15705615" side_tool="true" visible="true" weight="0.3984375" />
+      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.2880816" side_tool="true" visible="true" weight="0.3984375" />
       <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.49960256" weight="0.32854986" />
       <window_info anchor="right" id="Maven Projects" order="4" weight="0.5666902" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
@@ -784,7 +725,7 @@
       <window_info anchor="right" id="JSF" order="11" weight="0.2281399" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.84294385" visible="true" weight="0.3984375" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.7119184" visible="true" weight="0.3984375" />
       <window_info anchor="bottom" id="TODO" order="14" sideWeight="0.49960256" weight="0.44561934" />
       <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.48985344" weight="0.34774256" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
@@ -795,7 +736,7 @@
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.91713643" weight="0.67758447" />
       <window_info anchor="bottom" id="Spring" order="12" />
       <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49923313" weight="0.32888147" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.80792683" visible="true" weight="0.30955994" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.80792683" visible="true" weight="0.26003823" />
       <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info id="Web" order="2" sideWeight="0.19207317" side_tool="true" weight="0.19845179" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32967034" />
@@ -918,13 +859,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/phone/controller/EvelateController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="692">
-          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/phone/common/Constant.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -1268,10 +1202,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/salephone.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1311" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IPhoneDao.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
-          <caret line="65" column="44" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
+          <caret line="65" column="39" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
         </state>
       </provider>
     </entry>
