@@ -872,7 +872,7 @@
             console.log(data.msg);
         }
     });
-
+    $("[name='editorValue']").val(${phoneInfo.htmlText});
 
 //确认添加
 function formSubmit(){
