@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="salephone:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/salephone_war</output-path>
+    <root id="archive" name="salephone_war.war">
+      <element id="artifact" artifact-name="salephone:war exploded" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/salephone/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -6,86 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fac9cae4-0261-47f7-9ab1-1f2e20f200c2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/common/CommonResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/common/Constant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/common/MessageConstant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/common/PageBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/common/SearchVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/controller/DispatcherPageController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/controller/EvelateController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/controller/FileController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/controller/MenuController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/controller/OrderProcessLogController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/controller/OrdersController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/controller/PhoneController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/controller/PictureController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/controller/RoleController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/controller/RoleMenuController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/controller/ShopController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/controller/WalletLogController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/controller/client/ClientEvelateController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/controller/client/ClientOrdersController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/controller/client/ClientPhoneController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/controller/client/ClientUserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/controller/common/ChangePwdController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/controller/common/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/controller/common/RegisterController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/dao/IEvelateDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/dao/IMenuDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/dao/IOrderProcessLogDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/dao/IOrdersDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/dao/IPhoneDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/dao/IPictureDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/dao/IRoleDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/dao/IRoleMenuDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/dao/IShopDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/dao/IUserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/dao/IWalletLogDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/pojo/EvelatePojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/pojo/MenuPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/pojo/OrderProcessLogPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/pojo/OrdersPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/pojo/PhonePojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/pojo/PicturePojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/pojo/RoleMenuPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/pojo/RolePojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/pojo/ShopPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/pojo/UserPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/pojo/WalletLogPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/pojo/vo/MenuViewVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/pojo/vo/OrderFreeVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/pojo/vo/PageViewVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/pojo/vo/RoleMenuVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/service/IEvelateService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/service/IMenuService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/service/IOrderProcessLogService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/service/IOrdersService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/service/IPhoneService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/service/IPictureService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/service/IRoleMenuService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/service/IRoleService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/service/IShopService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/service/IUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/service/IWalletLogService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/service/impl/EvelateServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/service/impl/MenuServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/service/impl/OrderProcessLogServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/service/impl/OrdersServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/service/impl/PhoneServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/service/impl/PictureServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/service/impl/RoleMenuServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/service/impl/RoleServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/service/impl/ShopServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/service/impl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/service/impl/WalletLogServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/utils/DateUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/utils/JsonUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/utils/OrderCodeUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/utils/VerifyCodeImage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/utils/VerifyCodeUtils.class" beforeDir="false" />
-    </list>
+    <list default="true" id="fac9cae4-0261-47f7-9ab1-1f2e20f200c2" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/webpage/target/" />
@@ -120,7 +41,7 @@
       <file leaf-file-name="PhoneController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/phone/controller/PhoneController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
+            <state relative-caret-position="575">
               <caret line="44" column="69" selection-start-line="44" selection-start-column="54" selection-end-line="44" selection-end-column="69" />
             </state>
           </provider>
@@ -129,7 +50,7 @@
       <file leaf-file-name="ClientPhoneController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/phone/controller/client/ClientPhoneController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
+            <state relative-caret-position="552">
               <caret line="36" column="59" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
             </state>
           </provider>
@@ -138,12 +59,8 @@
       <file leaf-file-name="PhoneServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/phone/service/impl/PhoneServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
+            <state relative-caret-position="2415">
               <caret line="119" column="45" selection-start-line="119" selection-start-column="45" selection-end-line="119" selection-end-column="45" />
-              <folding>
-                <element signature="e#5065#5066#0" expanded="true" />
-                <element signature="e#5137#5138#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -151,7 +68,7 @@
       <file leaf-file-name="IPhoneDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/phone/dao/IPhoneDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="958">
+            <state relative-caret-position="1449">
               <caret line="68" column="29" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
             </state>
           </provider>
@@ -160,12 +77,8 @@
       <file leaf-file-name="phone-edit.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/phone/phone-edit.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
+            <state relative-caret-position="20838">
               <caret line="906" column="70" selection-start-line="906" selection-start-column="64" selection-end-line="906" selection-end-column="70" />
-              <folding>
-                <element signature="e#8535#12238#0#HTML" />
-                <element signature="e#12260#33234#0#HTML" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -173,7 +86,7 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/client/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
+            <state relative-caret-position="3519">
               <caret line="153" column="210" selection-start-line="153" selection-start-column="177" selection-end-line="153" selection-end-column="210" />
             </state>
           </provider>
@@ -182,7 +95,7 @@
       <file leaf-file-name="phoneInfo.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/client/phoneInfo.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
+            <state relative-caret-position="4370">
               <caret line="190" column="118" selection-start-line="190" selection-start-column="118" selection-end-line="190" selection-end-column="118" />
             </state>
           </provider>
@@ -191,8 +104,11 @@
       <file leaf-file-name="OrdersServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/phone/service/impl/OrdersServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
+            <state relative-caret-position="7383">
               <caret line="323" column="62" selection-start-line="323" selection-start-column="62" selection-end-line="323" selection-end-column="62" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -200,7 +116,7 @@
       <file leaf-file-name="IPhoneDao.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IPhoneDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="1265">
               <caret line="132" column="41" selection-start-line="132" selection-start-column="41" selection-end-line="132" selection-end-column="41" />
               <folding>
                 <element signature="n#update#0;n#mapper#0;n#!!top" />
@@ -385,8 +301,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -579,7 +495,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -587,10 +503,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ps_produce/ps_produce" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/target/salephone/META-INF/MANIFEST.MF" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
@@ -890,6 +806,7 @@
       <workItem from="1554771886362" duration="110000" />
       <workItem from="1554812118523" duration="3980000" />
       <workItem from="1555069652258" duration="24135000" />
+      <workItem from="1555254443998" duration="426000" />
     </task>
     <task id="LOCAL-00001" summary="代码初始化">
       <created>1555214345068</created>
@@ -909,7 +826,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="528083000" />
+    <option name="totallyTimeSpent" value="528509000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -921,11 +838,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1443" y="29" width="2177" height="1344" extended-state="0" />
-    <editor active="true" />
+    <frame x="1515" y="39" width="2177" height="1329" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5111006" side_tool="true" visible="true" weight="0.34764656" />
+      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.07605102" side_tool="true" visible="true" weight="0.3478261" />
       <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.49960256" weight="0.32854986" />
       <window_info anchor="right" id="Maven Projects" order="4" weight="0.5666902" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
@@ -937,59 +853,29 @@
       <window_info anchor="right" id="JSF" order="11" weight="0.2281399" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.923949" weight="0.59867877" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.923949" visible="true" weight="0.3478261" />
       <window_info anchor="bottom" id="TODO" order="14" sideWeight="0.49960256" weight="0.44561934" />
-      <window_info active="true" anchor="bottom" id="Messages" order="9" sideWeight="0.48889938" visible="true" weight="0.34764656" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32888147" />
-      <window_info anchor="right" id="Capture Analysis" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49976382" weight="0.32947975" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.91713643" weight="0.67758447" />
-      <window_info anchor="bottom" id="Spring" order="12" />
-      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49740198" weight="0.32782823" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.80792683" visible="true" weight="0.19272555" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-      <window_info id="Web" order="2" sideWeight="0.19207317" side_tool="true" weight="0.19845179" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32967034" />
-      <window_info anchor="right" id="Theme Preview" order="10" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.91713643" weight="0.67758447" />
-      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.07557865" side_tool="true" visible="true" weight="0.3479909" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.80792683" visible="true" weight="0.19272555" />
-      <window_info anchor="right" id="Capture Analysis" order="8" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32888147" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-      <window_info anchor="right" id="Theme Preview" order="10" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="4" weight="0.5666902" />
-      <window_info id="Web" order="2" sideWeight="0.19207317" side_tool="true" weight="0.19845179" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.49960256" weight="0.32854986" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Coverage" order="12" side_tool="true" visible="true" weight="0.06842105" />
-      <window_info anchor="right" id="Database" order="6" weight="0.3298887" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="right" id="CDI" order="5" />
-      <window_info anchor="bottom" id="TODO" order="14" sideWeight="0.49960256" weight="0.44561934" />
-      <window_info anchor="right" id="JSF" order="11" weight="0.2281399" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49840662" weight="0.32873562" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.92442137" visible="true" weight="0.3479909" />
       <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.48985344" weight="0.34774256" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32967034" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32888147" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.91713643" weight="0.67758447" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Spring" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49787435" weight="0.62541807" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.80792683" visible="true" weight="0.19461502" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info id="Web" order="2" sideWeight="0.19207317" side_tool="true" weight="0.19845179" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info id="Designer" order="2" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32967034" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="12" side_tool="true" visible="true" weight="0.06842105" />
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32888147" />
@@ -1193,8 +1079,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/phone/service/impl/OrdersServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
+        <state relative-caret-position="7383">
           <caret line="323" column="62" selection-start-line="323" selection-start-column="62" selection-end-line="323" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1399,50 +1288,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/phone/phone-edit.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
+        <state relative-caret-position="20838">
           <caret line="906" column="70" selection-start-line="906" selection-start-column="64" selection-end-line="906" selection-end-column="70" />
-          <folding>
-            <element signature="e#8535#12238#0#HTML" />
-            <element signature="e#12260#33234#0#HTML" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/phone/controller/PhoneController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
+        <state relative-caret-position="575">
           <caret line="44" column="69" selection-start-line="44" selection-start-column="54" selection-end-line="44" selection-end-column="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/phone/controller/client/ClientPhoneController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
+        <state relative-caret-position="552">
           <caret line="36" column="59" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/phone/dao/IPhoneDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="958">
+        <state relative-caret-position="1449">
           <caret line="68" column="29" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/phone/service/impl/PhoneServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
+        <state relative-caret-position="2415">
           <caret line="119" column="45" selection-start-line="119" selection-start-column="45" selection-end-line="119" selection-end-column="45" />
-          <folding>
-            <element signature="e#5065#5066#0" expanded="true" />
-            <element signature="e#5137#5138#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/IPhoneDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="1265">
           <caret line="132" column="41" selection-start-line="132" selection-start-column="41" selection-end-line="132" selection-end-column="41" />
           <folding>
             <element signature="n#update#0;n#mapper#0;n#!!top" />
@@ -1453,14 +1334,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/client/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
+        <state relative-caret-position="3519">
           <caret line="153" column="210" selection-start-line="153" selection-start-column="177" selection-end-line="153" selection-end-column="210" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/client/phoneInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
+        <state relative-caret-position="4370">
           <caret line="190" column="118" selection-start-line="190" selection-start-column="118" selection-end-line="190" selection-end-column="118" />
         </state>
       </provider>
