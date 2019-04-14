@@ -188,7 +188,7 @@ pageEncoding="UTF-8" isELIgnored="false" %>
                     if (data.result) {
                         layer.msg(data.msg,{icon:1,time:2000});
                         setTimeout(function(){
-                            parent.location.href = '${pageContext.request.contextPath }/dispatcher?view=/client/cart';
+                            parent.location.href = '${pageContext.request.contextPath }/dispatcher?view=/client/order/cart';
                         }, 1200);//1.2秒后返回上一页
                     } else {
                         layer.msg(data.msg, {icon : 5,time : 1000});

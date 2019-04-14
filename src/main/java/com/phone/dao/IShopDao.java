@@ -48,4 +48,10 @@ public interface IShopDao {
     public ShopPojo getById(int id);
 
 
+    /**
+     * 获取用户所属的店铺列表
+     * @param userId
+     * @return
+     */
+    public List<ShopPojo> getShopInfo(@Param("userId") int userId);
 }

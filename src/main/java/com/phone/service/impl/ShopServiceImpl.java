@@ -65,6 +65,18 @@ public class ShopServiceImpl implements IShopService {
         return shopDao.getById(id);
     }
 
+    @Override
+    public CommonResult getShopName(UserPojo userInfo) {
+        if (userInfo == null || userInfo.getRoleId() <= 0){
+            return CommonResult.ERROR(MessageConstant.PARAM_ERROR);
+        }
+        int userId = 0;
+        if (userInfo.getRoleId() != Constant.USER_ADMIN){//非管理员
+            userId = userInfo.getId();
+        }
+        return CommonResult.SUCCESS(shopDao.getShopInfo(userId));
+    }
+
 
     @Override
     public List<ShopPojo> selectShopList(SearchVo searchVo, PageBean page,UserPojo userInfo) {

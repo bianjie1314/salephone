@@ -56,4 +56,5 @@ public interface MessageConstant {
     String PHONE_NO_EXISTS = "商品不存在";
 
     String PAY_SUCCESS = "支付成功";
+    String SHOP_ERROR = "店铺信息获取失败";
 }

@@ -31,6 +31,10 @@ public class PhoneServiceImpl implements IPhoneService {
         if (phonePojo == null || userPojo == null){
             return CommonResult.ERROR(MessageConstant.PARAM_ERROR);
         }
+        //获取酒店编号
+        if (phonePojo.getShopId() <= 0){
+            return CommonResult.ERROR(MessageConstant.SHOP_ERROR);
+        }
         phonePojo.setCreateTime(new Date());
 
         int result = iPhoneDao.addBean(phonePojo);
@@ -63,6 +67,10 @@ public class PhoneServiceImpl implements IPhoneService {
     public CommonResult updateBean(PhonePojo phonePojo) {
         if (phonePojo == null || phonePojo.getId() <= 0){
             return CommonResult.ERROR(MessageConstant.PARAM_ERROR);
+        }
+        //获取酒店编号
+        if (phonePojo.getShopId() <= 0){
+            return CommonResult.ERROR(MessageConstant.SHOP_ERROR);
         }
         phonePojo.setUpdateTime(new Date());
         iPhoneDao.updateBean(phonePojo);
@@ -109,12 +117,12 @@ public class PhoneServiceImpl implements IPhoneService {
     public CommonResult selectPhonePage(SearchVo searchVo, PageBean page,UserPojo userInfo) {
         Map<String, Object> queryMap = getQueryMap(searchVo, page,userInfo);
         //数量为0
-        int count = iPhoneDao.countPhoneList(queryMap);
+        int count = iPhoneDao.countPhonePage(queryMap);
         if (count == 0){
             return CommonResult.SUCCESS(0,null);
         }
         page.setTotal(count);
-        List<PhonePojo> phonePojos = iPhoneDao.selectPhoneList(queryMap);
+        List<PhonePojo> phonePojos = iPhoneDao.selectPhonePage(queryMap);
         if (phonePojos != null && phonePojos.size() > 0){
             for (PhonePojo p: phonePojos ) {
                 if (!StringUtils.isEmpty(p.getPictureIds())){
@@ -129,10 +137,10 @@ public class PhoneServiceImpl implements IPhoneService {
     @Override
     public PhonePojo getById(int id) {
         PhonePojo phonePojo = iPhoneDao.getById(id);
-        if (phonePojo != null) {
-            if (!StringUtils.isEmpty(phonePojo.getPictureIds())) {
-                List<PicturePojo> byIds = iPictureDao.getByIds(Arrays.asList(phonePojo.getPictureIds().split(",")));
-                phonePojo.setPictures(byIds);
+        if (phonePojo != null){
+                if (!StringUtils.isEmpty(phonePojo.getPictureIds())){
+                    List<PicturePojo> byIds = iPictureDao.getByIds(Arrays.asList(phonePojo.getPictureIds().split(",")));
+                    phonePojo.setPictures(byIds);
             }
         }
         return phonePojo;

@@ -48,7 +48,7 @@
 					<option value="" selected="selected">全部分类</option>
 					<option value="1">未支付</option>
 					<option value="2">待发货</option>
-					<option value="3">待收获</option>
+					<option value="3">待收货</option>
 					<option value="4">已签收</option>
 					<option value="5">已评价</option>
 					<option value="6">订单取消</option>
@@ -121,7 +121,7 @@
 								<span class="label label-warning radius">待发货 </span>
 								</c:when>
 								<c:when test="${order.status == 3}">
-									<span class="label label-success radius">待收获 </span>
+									<span class="label label-success radius">待收货 </span>
 								</c:when>
 								<c:when test="${order.status == 4}">
 									<span class="label label-success radius">已签收 </span>

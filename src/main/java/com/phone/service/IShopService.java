@@ -61,4 +61,10 @@ public interface IShopService {
      */
     public ShopPojo getById(int id);
 
+    /**
+     * 获取商户的店铺列表
+     * @param userInfo
+     * @return
+     */
+    public CommonResult getShopName(UserPojo userInfo);
 }

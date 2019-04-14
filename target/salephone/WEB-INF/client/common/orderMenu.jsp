@@ -51,7 +51,7 @@ pageEncoding="UTF-8" isELIgnored="false" %>
 								<ul class="list-unstyled" id='+rowId+' style="text-align: center">
 									<li><a href="${pageContext.request.contextPath }/dispatcher?view=/client/order/cart">待支付(<span id="needPay" style="color: red">1</span>)</a></li>
 									<li><a href="${pageContext.request.contextPath }/dispatcher?view=/client/order/needDelivery" >待发货(<span id="needDelivery" style="color: red">0</span>)</a></li>
-									<li><a href="${pageContext.request.contextPath }/dispatcher?view=/client/order/needPen" >待收获(<span id="needPen" style="color: red">0</span>)</a></li>
+									<li><a href="${pageContext.request.contextPath }/dispatcher?view=/client/order/needPen" >待收货(<span id="needPen" style="color: red">0</span>)</a></li>
 									<li><a href="${pageContext.request.contextPath }/dispatcher?view=/client/order/needEvelate" >待评价(<span id="hsPen" style="color: red">0</span>)</a></li>
 									<li><a href="${pageContext.request.contextPath }/dispatcher?view=/client/order/orderEvelate">已评价(<span id="hsEvelate" style="color: red">0</span>)</a></li>
 									<li><a href="${pageContext.request.contextPath }/dispatcher?view=/client/order/orderFinish">结束单(<span id="hsFinish" style="color: red">0</span>)</a></li>

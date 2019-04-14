@@ -43,6 +43,15 @@ public class ShopController {
         return "admin/shop/shop-list";
     }
 
+    //最新的推荐列表
+    @RequestMapping(value="/getShopName" )
+    @ResponseBody
+    public CommonResult getShopName( HttpServletRequest request){
+        logger.info("********** 进入 getShopName 方法 ********** ",new Object[]{});
+        UserPojo userInfo = (UserPojo)request.getSession().getAttribute("userInfo");
+        return iShopService.getShopName(userInfo);
+    }
+
     //进行更新状态
     @RequestMapping(value = "/updateStatus/{id}/{status}", method = RequestMethod.GET)
     @ResponseBody

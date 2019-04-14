@@ -42,6 +42,13 @@ public interface IPhoneDao {
     public List<PhonePojo> selectPhoneList(Map<String, Object> paramMap);
 
     /**
+     * 查询满足条件的信息
+     * @param paramMap
+     * @return
+     */
+    public List<PhonePojo> selectPhonePage(Map<String, Object> paramMap);
+
+    /**
      * 获取手机类型
      * @return
      */
@@ -53,6 +60,13 @@ public interface IPhoneDao {
      * @return
      */
     public int countPhoneList(Map<String, Object> paramMap);
+
+    /**
+     * 统计满足条件的信息
+     * @param paramMap
+     * @return
+     */
+    public int countPhonePage(Map<String, Object> paramMap);
 
     /**
      * 通过id获取

@@ -36,6 +36,14 @@
 <div class="page-container">
 	<form action="" method="post" class="form form-horizontal" id="form-article-add">
 		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>所属店铺：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<select name="shopId"class="select" id="shopId">
+					<option value="0" selected="selected">所属店铺</option>
+				</select>
+			</div>
+		</div>
+		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>商品名称：</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<input type="text" class="input-text" value="${phoneInfo.name}" placeholder="" id="name" name="name">
@@ -62,7 +70,7 @@
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">库存数量：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="number" name="storeNum" id="storeNum" placeholder="输入单价" value="${phoneInfo.storeNum}" class="input-text" style="width:90%">
+				<input type="number" name="storeNum" id="storeNum" placeholder="输入库存数量" value="${phoneInfo.storeNum}" class="input-text" style="width:90%">
 				元</div>
 		</div>
 		<div class="row cl">
@@ -838,10 +846,40 @@
         var ue = UE.getEditor('editor');
     });
 
+    //获取店铺列表
+    $.ajax({
+        type: 'get',
+        url: '${pageContext.request.contextPath }/shop/getShopName',
+        dataType: 'json',
+        success: function(data){
+            if (data.result) {
+                var menusParents = data.data;
+                if (menusParents != null){
+                    for (var i = 0; i < menusParents.length; i++ ){
+                        var it = '<option value='+menusParents[i].id+'>'+menusParents[i].name+'</option>';
+                        $('#shopId').append(it);
+                    }
+                    // 设置所搜返回后的选中值
+                    $("#shopId").val("${phoneInfo.shopId}");
+                } else {
+                    layer.msg("没有你的店铺信息,商品创建可能会失败", {icon : 5,time : 1000});
+                }
+            } else {
+                layer.msg(data.msg,{icon:5,time:1000});
+            }
+        },
+        error:function(data) {
+            console.log(data.msg);
+        }
+    });
+
 
 //确认添加
 function formSubmit(){
-    if ($("[name='name']").val() == null || $("[name='name']").val() == ""){
+    if ($("[name='shopId']").val() == null || $("[name='shopId']").val() == "0"){
+        layer.msg("请选择所属店铺",{icon:5,time:3000});
+        return;
+    }else if ($("[name='name']").val() == null || $("[name='name']").val() == ""){
         layer.msg("请输入商品名称",{icon:5,time:3000});
         return;
     } else if($("[name='type']").val() == null || $("[name='type']").val() == ""){
@@ -872,6 +910,7 @@ function formSubmit(){
                 data:JSON.stringify({
                     "id":${phoneInfo.id},
                     "name":$("[name='name']").val(),
+                    "shopId":$("[name='shopId']").val(),
                     "type":$("[name='type']").val(),
                     "unitPrice":$("[name='unitPrice']").val(),
                     "salePrice":$("[name='salePrice']").val(),

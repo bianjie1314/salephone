@@ -7,8 +7,8 @@
         <selectKey order="AFTER" resultType="int" keyProperty="id">
             select last_insert_id()
         </selectKey>
-        insert into phone(name,unit_price,sale_price,type,description,store_num,offer_num,picture_ids,create_time,update_time,start_time,end_time,html_text)
-        values(#{name},#{unitPrice},#{salePrice},#{type},#{description},#{storeNum},#{offerNum},#{pictureIds},#{createTime},#{updateTime},#{startTime},#{endTime},#{htmlText})
+        insert into phone(name,unit_price,sale_price,type,description,store_num,shop_id,offer_num,picture_ids,create_time,update_time,start_time,end_time,html_text)
+        values(#{name},#{unitPrice},#{salePrice},#{type},#{description},#{storeNum},#{shopId},#{offerNum},#{pictureIds},#{createTime},#{updateTime},#{startTime},#{endTime},#{htmlText})
     </insert>
 
 
@@ -34,6 +34,9 @@
             </if>
             <if test="unitPrice != null">
                 unit_price = #{unitPrice},
+            </if>
+            <if test="shopId > 0">
+                shop_id = #{shopId},
             </if>
             <if test="salePrice != null">
                 sale_price = #{salePrice},
@@ -116,6 +119,51 @@
     <select id="selectPhoneList" parameterType="HashMap" resultType="PhonePojo">
         select * from  phone p
         <include refid="selectSql"/>
+        order by p.create_time desc
+        <if test="start != null">
+            limit #{start},#{offset}
+        </if>
+    </select>
+
+    <sql id="selectPageSql">
+        from  phone p,shop s
+        <where>
+             p.shop_id = s.id and s.status = 1
+            <if test="userId != null">
+                and s.user_id = #{userId}
+            </if>
+            <if test="name != null">
+                and p.name like '%${name}%'
+            </if>
+            <if test="shopId != null">
+                and p.shop_id = #{shopId}
+            </if>
+            <if test="unitPrice != null">
+                and p.unit_price = #{unitPrice}
+            </if>
+            <if test="type != null">
+                or p.type like '%${type}%'
+            </if>
+            <if test="startTime != null and startTime != ''">
+                and TO_DAYS(p.create_time) &gt;= TO_DAYS(#{startTime})
+            </if>
+            <if test="endTime != null and endTime != ''">
+                and TO_DAYS(p.create_time) &lt;= TO_DAYS(#{endTime})
+            </if>
+            <if test="updateTime != null">
+                and TO_DAYS(p.update_time) = TO_DAYS(#{updateTime})
+            </if>
+        </where>
+    </sql>
+
+    <select id="countPhonePage"  parameterType="HashMap" resultType="Integer">
+        select count(*)
+        <include refid="selectPageSql"/>
+    </select>
+
+    <select id="selectPhonePage" parameterType="HashMap" resultType="PhonePojo">
+        select *
+        <include refid="selectPageSql"/>
         order by p.create_time desc
         <if test="start != null">
             limit #{start},#{offset}

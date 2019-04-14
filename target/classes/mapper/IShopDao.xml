@@ -60,6 +60,12 @@
 
 
 
+    <select id="getShopInfo" parameterType="int" resultType="ShopPojo">
+        select name,id from  shop
+        <if test="userId > 0">
+            where user_id=#{userId}
+        </if>
+    </select>
 
     <select id="selectShopList" parameterType="HashMap" resultMap="shopMap">
         select s.id,s.name,s.description,s.location,s.status,s.create_time,s.update_time,
