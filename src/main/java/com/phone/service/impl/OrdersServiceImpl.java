@@ -286,14 +286,25 @@ public class OrdersServiceImpl implements IOrdersService {
         if (StringUtils.isEmpty(orderIds)){
             return CommonResult.ERROR(MessageConstant.PARAM_ERROR);
         }
-        String[] orderIdArr = orderIds.split(",");
+        String[] idArr = orderIds.split(",");
+        Map<String,Object> map = new HashMap<>();
+        map.put("ids",idArr);
+        List<OrdersPojo> ordersPojos = iOrdersDao.selectOrdersList(map);
+        if (ordersPojos == null || ordersPojos.size() == 0){
+            return CommonResult.ERROR(MessageConstant.ORDER_NO_EXISTS);
+        }
 
         List<OrderProcessLogPojo> processLogPojoList = new ArrayList<>();
-        for (String orderIdStr:orderIdArr){
-            int orderId = Integer.parseInt(orderIdStr);
+        List<WalletLogPojo> walletLogPojos = new ArrayList<>();
+
+        for (OrdersPojo order:ordersPojos) {
+
+            if (order.getStatus() == Constant.ORDER_CANCER){//已取消
+                return CommonResult.ERROR(order.getOrderCode()+MessageConstant.ORDER_HAVE_CANCER);
+            }
             //更新订单状态为已支付(待发货)
             OrdersPojo ordersPojo = new OrdersPojo();
-            ordersPojo.setId(orderId);
+            ordersPojo.setId(order.getId());
             ordersPojo.setStatus(Constant.ORDER_DELIVERY);
             ordersPojo.setUpdateTime(new Date());
             iOrdersDao.updateBean(ordersPojo);
@@ -303,13 +314,32 @@ public class OrdersServiceImpl implements IOrdersService {
             processLogPojo.setType(Constant.ORDER_DELIVERY);
             processLogPojo.setUser_id(user.getId());
             processLogPojo.setCreateTime(new Date());
-            processLogPojo.setOrder_id(orderId);
+            processLogPojo.setOrder_id(order.getId());
             processLogPojoList.add(processLogPojo);
 
             //TODO 账户余额
 
             //TODO 钱包付款记录
+            //退款记录
+            WalletLogPojo walletLogPojo = new WalletLogPojo();
+            walletLogPojo.setCreateTime(new Date());
+            walletLogPojo.setNote("订单支付");
+            walletLogPojo.setType(Constant.WALLET_PAY_2);
+            walletLogPojo.setUserId(user.getId());
+            walletLogPojo.setMoney(order.getPay());
+            walletLogPojo.setOrderId(order.getId());
+            walletLogPojos.add(walletLogPojo);
         }
+
+        //财务记录
+        if (walletLogPojos.size() > 0){
+            iWalletLogDao.insertBatch(walletLogPojos);
+        }
+
+        if (processLogPojoList.size() > 0){
+            orderProcessLogDao.insertBatch(processLogPojoList);
+        }
+
         //批量插入订单操作日志
         orderProcessLogDao.insertBatch(processLogPojoList);
         return CommonResult.SUCCESS(MessageConstant.PAY_SUCCESS,null);
