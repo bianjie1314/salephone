@@ -1,0 +1,21 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+/.idea/
+src/main/webapp/upload/
+src/test/
+target/generated-sources/
+target/salephone/WEB-INF/admin/
+target/salephone/WEB-INF/classes/
+target/salephone/WEB-INF/client/
+target/salephone/WEB-INF/lib/
+target/salephone/WEB-INF/view/
+target/salephone/WEB-INF/views/
+target/salephone/clientlib/
+target/salephone/pageResources/

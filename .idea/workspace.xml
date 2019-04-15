@@ -6,7 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fac9cae4-0261-47f7-9ab1-1f2e20f200c2" name="Default" comment="" />
+    <list default="true" id="fac9cae4-0261-47f7-9ab1-1f2e20f200c2" name="Default" comment="商品详细修改显示问题">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WEB-INF/classes/com/phone/service/impl/OrdersServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WEB-INF/classes/com/phone/service/impl/OrdersServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/phone/service/impl/OrdersServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/phone/service/impl/OrdersServiceImpl.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/webpage/target/" />
@@ -74,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="phone-edit.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="phone-edit.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/phone/phone-edit.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20838">
-              <caret line="906" column="70" selection-start-line="906" selection-start-column="64" selection-end-line="906" selection-end-column="70" />
+            <state relative-caret-position="502">
+              <caret line="884" column="82" selection-start-line="884" selection-end-line="885" />
             </state>
           </provider>
         </entry>
@@ -101,14 +105,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrdersServiceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OrdersServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/phone/service/impl/OrdersServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7383">
-              <caret line="323" column="62" selection-start-line="323" selection-start-column="62" selection-end-line="323" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="276">
+              <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -176,6 +177,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -209,7 +211,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/phone/controller/FileController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/client/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/IOrdersDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/phone/service/impl/OrdersServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/client/order/cart.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/client/order/needDelivery.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/client/order/needEvelate.jsp" />
@@ -227,11 +228,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/phone/common/MessageConstant.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/phone/dao/IShopDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/phone/phone-add.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/phone/phone-edit.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/phone/dao/IPhoneDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/phone/service/impl/PhoneServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/IPhoneDao.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/client/phoneInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/phone/service/impl/OrdersServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/phone/phone-edit.jsp" />
       </list>
     </option>
   </component>
@@ -301,8 +303,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -326,83 +328,6 @@
               <item name="salephone" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="phone" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="phone" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="phone" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="phone" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="phone" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="phone" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -430,72 +355,18 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="order" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
               <item name="phone" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
               <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="role" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salephone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salephone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -509,7 +380,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -806,7 +677,8 @@
       <workItem from="1554771886362" duration="110000" />
       <workItem from="1554812118523" duration="3980000" />
       <workItem from="1555069652258" duration="24135000" />
-      <workItem from="1555254443998" duration="426000" />
+      <workItem from="1555254443998" duration="1688000" />
+      <workItem from="1555329696736" duration="685000" />
     </task>
     <task id="LOCAL-00001" summary="代码初始化">
       <created>1555214345068</created>
@@ -822,11 +694,25 @@
       <option name="project" value="LOCAL" />
       <updated>1555215511485</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="测试idea提交">
+      <created>1555255393234</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1555255393234</updated>
+    </task>
+    <task id="LOCAL-00004" summary="商品详细修改显示问题">
+      <created>1555255858397</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1555255858397</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="528509000" />
+    <option name="totallyTimeSpent" value="530456000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -841,7 +727,7 @@
     <frame x="1515" y="39" width="2177" height="1329" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.07605102" side_tool="true" visible="true" weight="0.3478261" />
+      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5035427" side_tool="true" visible="true" weight="0.3478261" />
       <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.49960256" weight="0.32854986" />
       <window_info anchor="right" id="Maven Projects" order="4" weight="0.5666902" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
@@ -853,28 +739,28 @@
       <window_info anchor="right" id="JSF" order="11" weight="0.2281399" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.923949" visible="true" weight="0.3478261" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.92347664" weight="0.58779263" />
       <window_info anchor="bottom" id="TODO" order="14" sideWeight="0.49960256" weight="0.44561934" />
-      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.48985344" weight="0.34774256" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32888147" />
       <window_info anchor="right" id="Capture Analysis" order="8" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.91713643" weight="0.67758447" />
       <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.91713643" weight="0.67758447" />
       <window_info anchor="bottom" id="Spring" order="12" />
-      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49787435" weight="0.62541807" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.80792683" visible="true" weight="0.19461502" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49645725" visible="true" weight="0.3478261" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.80792683" visible="true" weight="0.19650449" />
       <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info id="Web" order="2" sideWeight="0.19207317" side_tool="true" weight="0.19845179" />
       <window_info anchor="right" id="Theme Preview" order="10" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32967034" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.48985344" weight="0.34774256" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32967034" />
       <window_info anchor="right" id="Coverage" order="12" side_tool="true" visible="true" weight="0.06842105" />
     </layout>
     <layout-to-restore>
@@ -924,7 +810,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="代码初始化" />
     <MESSAGE value="数据库" />
-    <option name="LAST_COMMIT_MESSAGE" value="数据库" />
+    <MESSAGE value="测试idea提交" />
+    <MESSAGE value="商品详细修改显示问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="商品详细修改显示问题" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -943,7 +831,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/phone/service/impl/OrdersServiceImpl.java</url>
-          <line>313</line>
+          <line>314</line>
           <properties />
           <option name="timeStamp" value="82" />
         </line-breakpoint>
@@ -961,7 +849,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/phone/service/impl/OrdersServiceImpl.java</url>
-          <line>404</line>
+          <line>405</line>
           <properties />
           <option name="timeStamp" value="111" />
         </line-breakpoint>
@@ -1079,11 +967,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/phone/service/impl/OrdersServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7383">
-          <caret line="323" column="62" selection-start-line="323" selection-start-column="62" selection-end-line="323" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="276">
+          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -1105,9 +990,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
           <caret line="279" column="29" lean-forward="true" selection-start-line="276" selection-start-column="22" selection-end-line="279" selection-end-column="29" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1278,18 +1160,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="876" column="3" lean-forward="true" selection-start-line="876" selection-start-column="3" selection-end-line="879" selection-end-column="10" />
-          <folding>
-            <element signature="e#8308#11216#0#HTML" />
-            <element signature="e#11234#30376#0#HTML" />
-            <element signature="e#30763#31585#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/phone/phone-edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20838">
-          <caret line="906" column="70" selection-start-line="906" selection-start-column="64" selection-end-line="906" selection-end-column="70" />
         </state>
       </provider>
     </entry>
@@ -1346,13 +1216,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/admin/phone/phone-edit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="884" column="82" selection-start-line="884" selection-end-line="885" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>salephone:war</last-edited>
+          <last-edited>salephone:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
