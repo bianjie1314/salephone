@@ -19,3 +19,4 @@ target/salephone/WEB-INF/view/
 target/salephone/WEB-INF/views/
 target/salephone/clientlib/
 target/salephone/pageResources/
+/src/main/resources/jdbc.properties
