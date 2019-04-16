@@ -73,18 +73,27 @@
 
 
     <select id="countOrderStatus" parameterType="int" resultType="map">
-      select t1.needPay,t2.needDelivery,t3.needPen,t4.hsPen,t5.hsEvelate,t6.hsFinish from
+      select t1.needPay,t2.needDelivery,t3.needPen,t4.hsPen,t5.hsEvelate,t6.hsFinish,t7.returnOrder from
         (select count(*) as needPay from orders where user_id=#{userId} and status = 1) as t1,
         (select count(*) as needDelivery from orders where user_id=#{userId} and status = 2) as t2,
         (select count(*) as needPen from orders where user_id=#{userId} and status = 3) as t3,
         (select count(*) as hsPen from orders where user_id=#{userId} and status = 4) as t4,
         (select count(*) as hsEvelate from orders where user_id=#{userId} and status = 5) as t5,
-        (select count(*) as hsFinish from orders where user_id=#{userId} and status = 6 or status = 7) as t6
+        (select count(*) as hsFinish from orders where user_id=#{userId} and (status = 6 or status = 7)) as t6,
+        (select count(*) as returnOrder from orders where user_id=#{userId} and (status = 8 or status = 9  or status = 10 or status = 11)) as t7
     </select>
 
 
     <select id="getById" parameterType="int" resultType="OrdersPojo">
         select * from  orders where id=#{id}
+    </select>
+
+
+    <select id="countNeedPay" parameterType="HashMap" resultType="Double">
+        select sum(pay) from  orders where id in
+        <foreach collection="ids" open="(" separator="," item="id" close=")">
+             #{id}
+         </foreach>
     </select>
 
     <select id="selectOrdersList" parameterType="HashMap" resultType="OrdersPojo">
@@ -112,6 +121,12 @@
             </if>
             <if test="status > 0">
                 and o.status = #{status}
+            </if>
+            <if test="statusRange != null">
+                and o.status in
+                <foreach collection="statusRange" open="(" separator="," item="statusR" close=")">
+                    #{statusR}
+                </foreach>
             </if>
             <if test="userId != null">
                 and o.user_id = #{userId}

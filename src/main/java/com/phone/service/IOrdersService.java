@@ -126,4 +126,12 @@ public interface IOrdersService {
      * @return
      */
     public CommonResult penOrder(String choiceId, UserPojo userInfo);
+
+    /**
+     * 退货申请
+     * @param orderId
+     * @param userInfo
+     * @return
+     */
+    public CommonResult applayReturnOrder(int orderId, UserPojo userInfo);
 }

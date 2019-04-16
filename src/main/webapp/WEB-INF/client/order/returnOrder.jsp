@@ -52,7 +52,7 @@
 				<div class="col-lg-12">
 					<ul class="breadcrumb">
 						<li><a href="${pageContext.request.contextPath }/dispatcher?view=/client/order/cart">我的订单</a></li>
-						<li><a href="${pageContext.request.contextPath }/dispatcher?view=/client/order/needPen">待收货订单</a></li>
+						<li><a href="${pageContext.request.contextPath }/dispatcher?view=/client/order/returnOrder">退货单</a></li>
 					</ul>
 				</div>
 			</div>
@@ -60,6 +60,7 @@
 			</div>
 			<div class="row">
 				<div class="pricedetails">
+
 				</div>
 			</div>
 		</div>
@@ -73,14 +74,14 @@
 <script type="text/javascript" src="${pageContext.request.contextPath }/pageResources/newJs/curd.js"></script>
 <script>
 
-    //未收货订单
+    //未支付订单
     $(document).ready(function(){
 		$.ajax({
 			type : 'get',
 			url : "${pageContext.request.contextPath }/client/order/getOrderList",
 			dataType : 'json',
 			data:{
-				"index":"3",
+				"category":"8,9,10,11",
 			},
 			success : function(data) {
 				if (data.result) {
@@ -91,6 +92,17 @@
 							var order  = pageViewVo.data[i];
                             totalPrice += order.pay;
                             var numName = "num"+i;
+                            var statusLabel = "";
+                            if (order.status = 8){
+                                statusLabel = "<div style='color: blue'>处理中</div>";
+                            }else if(order.status = 9){
+                                statusLabel = "<div style='color: yellow'>同意退货</div>";
+                            }else if(order.status = 10){
+                                statusLabel = "<div style='color: red'>拒绝退货</div>";
+                            }else if(order.status = 11){
+                                statusLabel = "<div style='color: coral'>退货完成</div>";
+                            }
+
                             var pc = '${pageContext.request.contextPath }/clientlib/images/p'+((i+1)%8+1)+'.jpg';
                             if (order.phone.pictures != null){
                                 pc = "${pageContext.request.contextPath }"+order.phone.pictures[0].pathUrl;
@@ -102,7 +114,7 @@
 										'<div class="col-md-3">'+
 											'<div class="image">'+
                                 				'<a href="${pageContext.request.contextPath }/client/phone/getPhoneById/'+order.phone.id+'?view=/client/phoneInfo">'+
-													'<img src="'+pc+'"  style="width:200px;height:320px"/>'+
+													'<img src="'+pc+'"  style="width:200px;height:320px" />'+
 												'</a>'+
 											'</div>'+
 										'</div>'+
@@ -123,10 +135,8 @@
                                                 orderView+=
 												'</div>'+
 												'<div class="price">应付金额:￥'+order.pay+'</div>'+
-												'<label>购买数量: </label>'+order.num+
-                            					'<a href="javascript:;" style="margin-left: 10px" onclick="penOrder('+order.id+')" class="btn btn-info">确认收货</a>'+
-                            					'<a href="javascript:;" style="margin-left: 10px" onclick="applayReturnOrder('+order.id+')" class="btn btn-warning">申请退货</a>'+
-											'</div>'+
+												'<label>购买数量: </label> '+order.num+
+											'</div>'+statusLabel+
 										'</div>'+
 										'<div class="clear"></div>'+
 									'</div>'+
@@ -134,9 +144,8 @@
 							$("#cartPhone").append(orderView);
 						}
 					}else {
-                        $("#cartPhone").append("无待收货订单");
+                        $("#cartPhone").append("订单空");
                     }
-
 				} else {
 					layer.msg(data.msg, {icon : 5,time : 1000});
 				}
@@ -147,70 +156,6 @@
 		});
 	});
 
-
-
-    /** 签收订单*/
-    function penOrder(id) {
-        layer.confirm('确认要签收吗？', function(index) {
-            $.ajax({
-                type : 'get',
-                url : "${pageContext.request.contextPath }/client/order/penOrder",
-                dataType : 'json',
-                data : {
-                    "choiceId" : id,
-                },
-                success : function(data) {
-                    if (data.result) {
-                        layer.msg(data.msg, {
-                            icon : 1,
-                            time : 1000
-                        });
-                        location.reload();
-                    } else {
-                        layer.msg(data.msg, {
-                            icon : 5,
-                            time : 1000
-                        });
-                    }
-                },
-                error : function(data) {
-                    console.log(data.msg);
-                }
-            });
-        });
-    }
-
-
-    /** 退货申请*/
-    function applayReturnOrder(id) {
-        layer.confirm('确认要申请退货吗？', function(index) {
-            $.ajax({
-                type : 'get',
-                url : "${pageContext.request.contextPath }/client/order/applayReturnOrder",
-                dataType : 'json',
-                data : {
-                    "orderId" : id,
-                },
-                success : function(data) {
-                    if (data.result) {
-                        layer.msg(data.msg, {
-                            icon : 1,
-                            time : 1000
-                        });
-                        location.reload();
-                    } else {
-                        layer.msg(data.msg, {
-                            icon : 5,
-                            time : 1000
-                        });
-                    }
-                },
-                error : function(data) {
-                    console.log(data.msg);
-                }
-            });
-        });
-    }
 
 </script>
 

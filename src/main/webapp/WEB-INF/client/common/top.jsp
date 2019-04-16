@@ -90,7 +90,7 @@ pageEncoding="UTF-8" isELIgnored="false" %>
         layer.confirm('确认要退出登录吗？', function(index) {
             $.ajax({
                 type : 'get',
-                url : "${pageContext.request.contextPath }/exit",
+                url : "${pageContext.request.contextPath }/clientExit",
                 dataType : 'json',
                 success : function(data) {
                     if (data.result) {

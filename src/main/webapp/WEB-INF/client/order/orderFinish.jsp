@@ -52,7 +52,7 @@
 				<div class="col-lg-12">
 					<ul class="breadcrumb">
 						<li><a href="${pageContext.request.contextPath }/dispatcher?view=/client/order/cart">我的订单</a></li>
-						<li><a href="../index.jsp">已完成订单</a></li>
+						<li><a href="${pageContext.request.contextPath }/dispatcher?view=/client/order/orderFinish">已完成订单</a></li>
 					</ul>
 				</div>
 			</div>
@@ -74,7 +74,7 @@
 <script type="text/javascript" src="${pageContext.request.contextPath }/pageResources/newJs/curd.js"></script>
 <script>
 
-    //未支付订单
+    //完成
     $(document).ready(function(){
 		$.ajax({
 			type : 'get',
@@ -96,6 +96,13 @@
                             var pc = '${pageContext.request.contextPath }/clientlib/images/p'+((i+1)%8+1)+'.jpg';
                             if (order.phone.pictures != null){
                                 pc = "${pageContext.request.contextPath }"+order.phone.pictures[0].pathUrl;
+                            }
+
+                            var statusLabel = "";
+                            if (order.status = 8){
+                                statusLabel = "<div style='color: red'>订单取消</div>";
+                            }else if(order.status = 9){
+                                statusLabel = "<div style='color: yellow'>订单完成</div>";
                             }
                             <!-- 单个手机 -->
 							var orderView =
@@ -125,8 +132,8 @@
                                                 orderView+=
 												'</div>'+
 												'<div class="price">应付金额:￥'+order.pay+'</div>'+
-												'<label>购买数量: </label> '+order.num
-											'</div>'+
+												'<label>购买数量: </label> '+order.num+
+											'</div>'+statusLabel+
 										'</div>'+
 										'<div class="clear"></div>'+
 									'</div>'+

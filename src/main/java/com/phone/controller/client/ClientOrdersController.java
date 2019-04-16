@@ -33,7 +33,7 @@ public class ClientOrdersController {
     @RequestMapping(value="/getOrderList",method=RequestMethod.GET )
     @ResponseBody
     public CommonResult getOrderList(SearchVo searchVo, PageBean page,HttpServletRequest request){
-        logger.info("********** 进入 getOrderList 方法,searchVo={},page={}********** ",new Object[]{searchVo,page});
+        logger.info("********** 进入 client - getOrderList 方法,searchVo={},page={}********** ",new Object[]{searchVo,page});
         UserPojo user = (UserPojo)request.getSession().getAttribute("clientUserInfo");
         return iOrdersService.getOrdersList(searchVo, page,user);
     }
@@ -43,7 +43,7 @@ public class ClientOrdersController {
     @RequestMapping(value="/countOrderStatus",method=RequestMethod.GET )
     @ResponseBody
     public CommonResult countOrderStatus(HttpServletRequest request){
-        logger.info("********** 进入 countOrderStatus 方法 ********** ");
+        logger.info("********** 进入 client - countOrderStatus 方法 ********** ");
         UserPojo user = (UserPojo)request.getSession().getAttribute("clientUserInfo");
         return iOrdersService.countOrderStatus(user);
     }
@@ -52,15 +52,33 @@ public class ClientOrdersController {
     @RequestMapping(value="/delete/{id}",method=RequestMethod.GET )
     @ResponseBody
     public CommonResult deleteOrders(@PathVariable("id") int id){
-        logger.info("********** 进入 deleteOrders 方法,id={}********** ",new Object[]{id});
+        logger.info("********** 进入 client - deleteOrders 方法,id={}********** ",new Object[]{id});
         return iOrdersService.deleteById(id);
+    }
+
+    //标记--->签收订单
+    @RequestMapping(value = "/penOrder", method = RequestMethod.GET)
+    @ResponseBody
+    public CommonResult penOrder(String choiceId,HttpServletRequest request) {
+        logger.info("************  进入 client - penOrder 方法,choiceId={} ************ ",new Object[]{choiceId});
+        UserPojo userInfo = (UserPojo)request.getSession().getAttribute("clientUserInfo");
+        return iOrdersService.penOrder(choiceId,userInfo);
+    }
+
+    //退货申请
+    @RequestMapping(value = "/applayReturnOrder", method = RequestMethod.GET)
+    @ResponseBody
+    public CommonResult applayReturnOrder(int orderId,HttpServletRequest request) {
+        logger.info("************  进入 client - applayReturnOrder 方法,orderId={} ************ ",new Object[]{orderId});
+        UserPojo userInfo = (UserPojo)request.getSession().getAttribute("clientUserInfo");
+        return iOrdersService.applayReturnOrder(orderId,userInfo);
     }
 
     //更新订单数量
     @RequestMapping(value="/updateNum")
     @ResponseBody
     public CommonResult updateNum(@RequestBody OrdersPojo orders){
-        logger.info("********** 进入 updateNum 方法,orders={}********** ",new Object[]{orders});
+        logger.info("********** 进入 client - updateNum 方法,orders={}********** ",new Object[]{orders});
         return iOrdersService.updateOrderNum(orders);
     }
 
@@ -69,7 +87,7 @@ public class ClientOrdersController {
     @RequestMapping(value="/countPayFree")
     @ResponseBody
     public CommonResult countPayFree(String orderIds,HttpServletRequest request){
-        logger.info("********** 进入 countPayFree 方法,orderIds={}********** ",new Object[]{orderIds});
+        logger.info("********** 进入 client - countPayFree 方法,orderIds={}********** ",new Object[]{orderIds});
         return iOrdersService.countPayFree(orderIds);
     }
 
@@ -77,7 +95,7 @@ public class ClientOrdersController {
     @RequestMapping(value="/payOrders")
     @ResponseBody
     public CommonResult payOrders(String orderIds,HttpServletRequest request){
-        logger.info("********** 进入 payOrders 方法,orderIds={}********** ",new Object[]{orderIds});
+        logger.info("********** 进入 client - payOrders 方法,orderIds={}********** ",new Object[]{orderIds});
         UserPojo user = (UserPojo)request.getSession().getAttribute("clientUserInfo");
         return iOrdersService.payOrders(orderIds,user);
     }
@@ -86,7 +104,7 @@ public class ClientOrdersController {
     @RequestMapping(value="/addCar")
     @ResponseBody
     public CommonResult addCar(@RequestBody OrdersPojo orders,HttpServletRequest request){
-        logger.info("********** 进入 addOrders 方法,orders={}********** ",new Object[]{orders});
+        logger.info("********** 进入 client - addOrders 方法,orders={}********** ",new Object[]{orders});
         //用户信息
         UserPojo user = (UserPojo)request.getSession().getAttribute("clientUserInfo");
         return iOrdersService.addBean(orders,user);

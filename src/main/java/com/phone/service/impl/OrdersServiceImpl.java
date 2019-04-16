@@ -14,6 +14,7 @@ import org.springframework.util.StringUtils;
 
 import javax.transaction.Transactional;
 import java.util.*;
+import java.util.stream.Collectors;
 
 
 @Service
@@ -104,6 +105,11 @@ public class OrdersServiceImpl implements IOrdersService {
             }
         }
         if (searchVo != null){
+            if (!StringUtils.isEmpty(searchVo.getCategory())){
+                List<String> statusList = Arrays.asList(searchVo.getCategory().split(","));
+                List<Integer> listIds = Arrays.asList(searchVo.getCategory().split(",")).stream().map(s -> Integer.parseInt(s.trim())).collect(Collectors.toList());
+                paramMap.put("statusRange",listIds);
+            }
             if (!StringUtils.isEmpty(searchVo.getText())){
                 paramMap.put("orderCode",searchVo.getText());
             }
@@ -118,9 +124,6 @@ public class OrdersServiceImpl implements IOrdersService {
             }
             if (!StringUtils.isEmpty(searchVo.getEndTime())){
                 paramMap.put("endTime",searchVo.getEndTime());
-            }
-            if (!StringUtils.isEmpty(searchVo.getCategory())){
-                paramMap.put("status",searchVo.getCategory());
             }
         }
         if (page != null && page.getStart() >= 0){
@@ -282,6 +285,7 @@ public class OrdersServiceImpl implements IOrdersService {
         return CommonResult.SUCCESS(MessageConstant.UPDATE_SUCCESS,null);
     }
 
+    @Transactional
     @Override
     public CommonResult payOrders(String orderIds,UserPojo user) {
         if (StringUtils.isEmpty(orderIds)){
@@ -297,6 +301,12 @@ public class OrdersServiceImpl implements IOrdersService {
 
         List<OrderProcessLogPojo> processLogPojoList = new ArrayList<>();
         List<WalletLogPojo> walletLogPojos = new ArrayList<>();
+        //账户余额比较
+        double needPay = iOrdersDao.countNeedPay(map);
+        UserPojo userPojo = iUserService.getById(user.getId());
+        if (userPojo.getBalance() < needPay){
+            return CommonResult.ERROR(MessageConstant.BALANCE_NO_ENOUGH);
+        }
 
         for (OrdersPojo order:ordersPojos) {
 
@@ -318,10 +328,8 @@ public class OrdersServiceImpl implements IOrdersService {
             processLogPojo.setOrder_id(order.getId());
             processLogPojoList.add(processLogPojo);
 
-            //TODO 账户余额
 
-            //TODO 钱包付款记录
-            //退款记录
+            //钱包付款记录
             WalletLogPojo walletLogPojo = new WalletLogPojo();
             walletLogPojo.setCreateTime(new Date());
             walletLogPojo.setNote("订单支付");
@@ -331,6 +339,14 @@ public class OrdersServiceImpl implements IOrdersService {
             walletLogPojo.setOrderId(order.getId());
             walletLogPojos.add(walletLogPojo);
         }
+
+        //更新账户余额
+        UserPojo updateUser = new UserPojo();
+        updateUser.setId(user.getId());
+        updateUser.setBalance(userPojo.getBalance() - needPay);
+        updateUser.setUpdateTime(new Date());
+        iUserService.updateBean(updateUser);
+
 
         //财务记录
         if (walletLogPojos.size() > 0){
@@ -497,6 +513,38 @@ public class OrdersServiceImpl implements IOrdersService {
         }
 
         return CommonResult.SUCCESS(MessageConstant.ORDER_CANCER_SUCCESS,null);
+    }
+
+    @Transactional
+    @Override
+    public CommonResult applayReturnOrder(int orderId, UserPojo userInfo) {
+        if (orderId <= 0){
+            return CommonResult.ERROR(MessageConstant.PARAM_ERROR);
+        }
+        OrdersPojo ordersPojo = iOrdersDao.getById(orderId);
+        if (ordersPojo == null){
+            return CommonResult.ERROR(MessageConstant.ORDER_NO_EXISTS);
+        }
+
+        if (ordersPojo.getStatus() != Constant.ORDER_GAINS){
+            return CommonResult.ERROR(MessageConstant.ORDER_NO_GAIN);
+        }
+
+        //更新订单
+        OrdersPojo updateOrder = new OrdersPojo();
+        updateOrder.setId(orderId);
+        updateOrder.setStatus(Constant.ORDER_RETURN_APPLAY);
+        updateOrder.setUpdateTime(new Date());
+        iOrdersDao.updateBean(updateOrder);
+
+        //订单流程记录
+        OrderProcessLogPojo processLogPojo = new OrderProcessLogPojo();
+        processLogPojo.setCreateTime(new Date());
+        processLogPojo.setOrder_id(orderId);
+        processLogPojo.setType(Constant.ORDER_RETURN_APPLAY);
+        processLogPojo.setUser_id(userInfo.getId());
+        orderProcessLogDao.addBean(processLogPojo);
+        return CommonResult.SUCCESS(MessageConstant.ORDER_APPLYING_DOING,null);
     }
 
 

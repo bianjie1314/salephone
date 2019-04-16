@@ -44,7 +44,7 @@
 		<form action="${pageContext.request.contextPath }/order/getOrderList" method="get">
 		<div class="text-c">
 			<span class="select-box inline">
-			<select name="category"class="select">
+			<select name="index"class="select">
 					<option value="" selected="selected">全部分类</option>
 					<option value="1">未支付</option>
 					<option value="2">待发货</option>

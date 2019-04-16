@@ -68,4 +68,11 @@ public interface IOrdersDao {
      * @return
      */
     public Map<String,Integer> countOrderStatus(int id);
+
+    /**
+     * 统计需要支付的费用
+     * @param map
+     * @return
+     */
+    public double countNeedPay(Map<String,Object> map);
 }

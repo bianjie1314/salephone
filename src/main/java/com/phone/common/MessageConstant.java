@@ -34,7 +34,10 @@ public interface MessageConstant {
 
 
 
+    String BALANCE_NO_ENOUGH = "账户余额不足";
     String ORDER_NO_EXISTS = "订单不存在";
+    String ORDER_NO_GAIN = "非待收货订单，无法进行退货申请";
+    String ORDER_APPLYING_DOING = "退货申请处理中，请耐心等待";
     String ORDER_NO_PAY = "订单未支付";
     String ORDER_HAVE_DELIVERY = "订单已发货";
     String ORDER_HAVE_CANCER = "订单已取消过";
