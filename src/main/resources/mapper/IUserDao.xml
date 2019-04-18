@@ -36,6 +36,9 @@
             <if test="password != null">
                 password = #{password},
             </if>
+            <if test="balance != null">
+                balance = #{balance},
+            </if>
             <if test="roleId > 0">
                 role_id = #{roleId},
             </if>

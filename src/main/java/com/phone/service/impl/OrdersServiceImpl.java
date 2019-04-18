@@ -6,6 +6,7 @@ import com.phone.pojo.*;
 import com.phone.pojo.vo.OrderFreeVo;
 import com.phone.service.IOrdersService;
 import com.phone.service.IUserService;
+import com.phone.utils.NumberUtil;
 import com.phone.utils.OrderCodeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.OrderUtils;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import javax.transaction.Transactional;
+import java.text.DecimalFormat;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -340,13 +342,15 @@ public class OrdersServiceImpl implements IOrdersService {
             walletLogPojos.add(walletLogPojo);
         }
 
-        //更新账户余额
+        //更新账户余额,保留两个小数点
+        double balance = NumberUtil.formateDoubleWithTwoPoint(userPojo.getBalance() - needPay);
         UserPojo updateUser = new UserPojo();
         updateUser.setId(user.getId());
-        updateUser.setBalance(userPojo.getBalance() - needPay);
+        updateUser.setBalance(balance);
         updateUser.setUpdateTime(new Date());
         iUserService.updateBean(updateUser);
-
+        //更新客户端显示的账户余额问题
+        user.setBalance(balance);
 
         //财务记录
         if (walletLogPojos.size() > 0){

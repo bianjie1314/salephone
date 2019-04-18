@@ -97,7 +97,12 @@ public class ClientOrdersController {
     public CommonResult payOrders(String orderIds,HttpServletRequest request){
         logger.info("********** 进入 client - payOrders 方法,orderIds={}********** ",new Object[]{orderIds});
         UserPojo user = (UserPojo)request.getSession().getAttribute("clientUserInfo");
-        return iOrdersService.payOrders(orderIds,user);
+        CommonResult commonResult = iOrdersService.payOrders(orderIds, user);
+        if (commonResult.isResult()){
+            //更新客户端的信息缓存(余额可能存在修改)
+            request.getSession().setAttribute("clientUserInfo",user);
+        }
+        return commonResult;
     }
 
     //添加购物车
