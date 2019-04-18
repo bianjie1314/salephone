@@ -108,7 +108,7 @@
     </sql>
 
     <select id="selectPhoneType" resultType="String">
-        select distinct(p.name) from phone p order by create_time desc
+        select distinct(p.name) from phone p order by p.create_time desc
     </select>
 
     <select id="countPhoneList"  parameterType="HashMap" resultType="Integer">
