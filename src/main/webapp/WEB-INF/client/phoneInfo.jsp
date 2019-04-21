@@ -323,7 +323,7 @@ pageEncoding="UTF-8" isELIgnored="false" %>
             dataType : 'json',
             data:{
                 "index":"${phoneInfo.id}",	//商品id
-                "status":1,
+                "status":2,
                 "start":0,	//起始页
                 "offset":10	//数量
             },
