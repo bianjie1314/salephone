@@ -194,6 +194,6 @@ public class UserServiceImpl implements IUserService {
         walletLogPojo.setNote("账户充值");
         iWalletLogDao.addBean(walletLogPojo);
 
-        return CommonResult.SUCCESS(MessageConstant.MODIFY_SUCCESS);
+        return CommonResult.SUCCESS(MessageConstant.MODIFY_SUCCESS,null);
     }
 }

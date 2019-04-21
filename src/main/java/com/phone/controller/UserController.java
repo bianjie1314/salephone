@@ -83,7 +83,6 @@ public class UserController {
     @ResponseBody
     public CommonResult updateOtherUser(@RequestBody UserPojo user, HttpServletRequest request){
         logger.info("********** 进入 updateUser 方法,user={}********** ",new Object[]{user});
-        // 更新缓存
         return iUserService.updateBean(user);
     }
 

@@ -76,4 +76,9 @@ public interface IPhoneDao {
     public PhonePojo getById(int id);
 
 
+    /**
+     * 更新库存数量
+     * @param updatePhone
+     */
+    public void updateNum(PhonePojo updatePhone);
 }

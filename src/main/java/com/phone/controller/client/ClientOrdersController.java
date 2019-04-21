@@ -39,7 +39,7 @@ public class ClientOrdersController {
     }
 
 
-    //获取列表
+    //数量统计
     @RequestMapping(value="/countOrderStatus",method=RequestMethod.GET )
     @ResponseBody
     public CommonResult countOrderStatus(HttpServletRequest request){

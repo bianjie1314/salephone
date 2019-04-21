@@ -47,9 +47,12 @@ public class ClientUserController {
         logger.info("********** 进入 addWallet 方法,money={}********** ",new Object[]{money});
         // 更新缓存
         UserPojo userInfo = (UserPojo)request.getSession().getAttribute("clientUserInfo");
-        userInfo.setBalance(userInfo.getBalance()+money);
-        request.getSession().setAttribute("clientUserInfo",userInfo);//更新账户余额缓存
-        return iUserService.addBalance(money,userInfo);
+        CommonResult commonResult = iUserService.addBalance(money, userInfo);
+        if (commonResult.isResult()){
+            userInfo.setBalance(userInfo.getBalance()+money);
+            request.getSession().setAttribute("clientUserInfo",userInfo);//更新账户余额缓存
+        }
+        return commonResult;
     }
 
 

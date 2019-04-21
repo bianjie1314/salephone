@@ -315,6 +315,25 @@ public class OrdersServiceImpl implements IOrdersService {
             if (order.getStatus() == Constant.ORDER_CANCER){//已取消
                 return CommonResult.ERROR(order.getOrderCode()+MessageConstant.ORDER_HAVE_CANCER);
             }
+
+            PhonePojo phonePojo = iPhoneDao.getById(order.getPhoneId());
+            if (phonePojo == null){
+                return CommonResult.ERROR(order.getOrderCode()+MessageConstant.PHONE_NOT_EXIST);
+            }
+
+            if (order.getNum() > phonePojo.getStoreNum()){
+                return CommonResult.ERROR(order.getOrderCode()+MessageConstant.PHONE_NOT_ENOUGH+"剩余"+phonePojo.getStoreNum());
+            }
+
+            //商品库存
+            PhonePojo updatePhone = new PhonePojo();
+            updatePhone.setId(phonePojo.getId());
+            updatePhone.setUpdateTime(new Date());
+            updatePhone.setOfferNum(order.getNum());
+            updatePhone.setStoreNum(phonePojo.getStoreNum() - order.getNum());
+            iPhoneDao.updateNum(updatePhone);
+
+
             //更新订单状态为已支付(待发货)
             OrdersPojo ordersPojo = new OrdersPojo();
             ordersPojo.setId(order.getId());
@@ -431,6 +450,20 @@ public class OrdersServiceImpl implements IOrdersService {
             processLogPojo.setType(Constant.ORDER_CANCER);
             processLogPojo.setUser_id(userInfo.getId());
             processLogPojos.add(processLogPojo);
+
+            PhonePojo phonePojo = iPhoneDao.getById(order.getPhoneId());
+            if (phonePojo == null){
+                return CommonResult.ERROR(order.getOrderCode()+MessageConstant.PHONE_NOT_EXIST);
+            }
+            //商品库存
+            PhonePojo updatePhone = new PhonePojo();
+            updatePhone.setId(phonePojo.getId());
+            updatePhone.setUpdateTime(new Date());
+            updatePhone.setOfferNum(phonePojo.getOfferNum() - order.getNum());
+            updatePhone.setStoreNum(phonePojo.getStoreNum() + order.getNum());
+            iPhoneDao.updateNum(updatePhone);
+
+
 
             //金额退款
             if (order.getStatus() == Constant.ORDER_DELIVERY){

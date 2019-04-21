@@ -314,7 +314,10 @@
                     },
                     success : function(data) {
                         if (data.result) {
-                            //TODO 刷新
+                            layer.msg(data.msg, {
+                                icon : 1,
+                                time : 2000
+                            });
                             window.location.replace( window.location.href);
                         } else {
                             layer.msg(data.msg, {

@@ -78,7 +78,7 @@
         (select count(*) as needDelivery from orders where user_id=#{userId} and status = 2) as t2,
         (select count(*) as needPen from orders where user_id=#{userId} and status = 3) as t3,
         (select count(*) as hsPen from orders where user_id=#{userId} and status = 4) as t4,
-        (select count(*) as hsEvelate from orders where user_id=#{userId} and status = 5) as t5,
+        (select count(*) as hsEvelate from orders o left join evelate e on o.id = e.order_id where o.user_id=#{userId} and o.status = 5 and e.status = 2) as t5,
         (select count(*) as hsFinish from orders where user_id=#{userId} and (status = 6 or status = 7)) as t6,
         (select count(*) as returnOrder from orders where user_id=#{userId} and (status = 8 or status = 9  or status = 10 or status = 11)) as t7
     </select>

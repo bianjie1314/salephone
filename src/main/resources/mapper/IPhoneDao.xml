@@ -75,6 +75,10 @@
         where id=#{id}
     </update>
 
+    <update id="updateNum" parameterType="PhonePojo">
+        update phone set store_num = #{storeNum},offer_num = #{offerNum}, update_time = #{updateTime} where id=#{id}
+    </update>
+
     <sql id="selectSql">
         <if test="userId != null">
             ,shop s

@@ -47,6 +47,8 @@ public interface MessageConstant {
     String ORDER_NOT_DELEIVE= "订单不是已发货状态";
     String ORDER_RETURN_APPLAY_SOLVE_SUCCESS = "退货申请处理成功";
     String ORDER_CANCER_SUCCESS = "成功取消订单";
+    String PHONE_NOT_EXIST = "商品不存在";
+    String PHONE_NOT_ENOUGH = "商品库存不足";
 
     String ROLE_EXISTS = "角色已经存在";
     String MENU_EXISTS = "菜单已经存在";
