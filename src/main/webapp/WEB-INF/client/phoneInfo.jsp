@@ -228,6 +228,11 @@ pageEncoding="UTF-8" isELIgnored="false" %>
                     if (pageViewVo.size > 0 && pageViewVo.data != null){
                         for (var i = 0; i < pageViewVo.data.length; i++ ){
                             var phone  = pageViewVo.data[i];
+                            debugger
+
+                            if(phone.id == ${phoneInfo.id}){
+                                continue;
+                            }
 
                             var pc = ""${pageContext.request.contextPath };
                             if (phone.pictures != null){
@@ -290,6 +295,11 @@ pageEncoding="UTF-8" isELIgnored="false" %>
                             }else {
                                 pc = '${pageContext.request.contextPath }/clientlib/images/p'+((i+1)%8+1)+'.jpg';
                             }
+
+                            if(phone.id == ${phoneInfo.id}){
+                                continue;
+                            }
+
                             <!-- 单个手机 -->
                             var productView = ''+
                         		'<div class="product">'+
